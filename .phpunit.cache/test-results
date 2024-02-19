@@ -1,1 +1,1 @@
-{"version":1,"defects":[],"times":{"MoneyTest::it_should_return_true":0.001}}
+{"version":1,"defects":{"DollarTest::multiplication":7},"times":{"MoneyTest::it_should_return_true":0.005,"DollarTest::multiplication":0.017,"MoneyTest::multiplication":0.002}}

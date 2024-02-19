@@ -1,21 +1,23 @@
 <?php
 declare(strict_types=1);
 
+use App\Dollar;
 use PHPUnit\Framework\TestCase;
-use App\Money;
+
+// $5 + 10CHF = $10 if rate is 2:1
+// $5 * 2 = $10
+// Make "amount" private
+// Dollar side-effects ?
+// Money rounding ?
 
 class MoneyTest extends TestCase
 {
-    private Money $sut;
-
-    protected function setUp(): void
-    {
-        $this->sut = new Money();
-    }
 
     /** @test **/
-    public function it_should_return_true(): void
+    public function multiplication(): void
     {
-        $this->assertTrue($this->sut->foo());
+        $five = new Dollar(5);
+        $five->times(2);
+        $this->assertEquals(10, $five->amount);
     }
 }
