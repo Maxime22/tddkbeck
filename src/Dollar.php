@@ -6,15 +6,14 @@ namespace App;
 class Dollar
 {
     public $amount;
-    private int $int;
 
-    public function __construct(int $int)
+    public function __construct(int $amount)
     {
-        $this->int = $int;
+        $this->amount = $amount;
     }
 
     public function times(int $multiplier)
     {
-        $this->amount = 5 * 2;
+        $this->amount = $this->amount * 2;
     }
 }
