@@ -5,7 +5,7 @@ namespace App;
 
 class Dollar
 {
-    public $amount = 10;
+    public $amount = 5*2;
     private int $int;
 
     public function __construct(int $int)
