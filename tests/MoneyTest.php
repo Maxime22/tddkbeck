@@ -11,6 +11,8 @@ use PHPUnit\Framework\TestCase;
 // Money rounding ?
 // equals() ✔️
 // hashCode()
+// Equal null
+// Equal object
 
 class MoneyTest extends TestCase
 {
