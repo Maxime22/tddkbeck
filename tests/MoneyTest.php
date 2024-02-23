@@ -9,7 +9,7 @@ use PHPUnit\Framework\TestCase;
 // Make "amount" private
 // Dollar side-effects ? ✔️
 // Money rounding ?
-// equals()
+// equals() ✔️
 // hashCode()
 
 class MoneyTest extends TestCase

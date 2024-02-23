@@ -17,8 +17,12 @@ class Dollar
         return new Dollar($this->amount * $multiplier);
     }
 
-    public function equals($param): bool
+    public function equals(object $object): bool
     {
-        return true;
+        if (!($object instanceof Dollar)) {
+            return false;
+        }
+        $dollar = $object;
+        return $this->amount == $dollar->amount;
     }
 }
