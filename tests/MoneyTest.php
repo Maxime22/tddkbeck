@@ -10,6 +10,7 @@ use PHPUnit\Framework\TestCase;
 // Dollar side-effects ? ✔️
 // Money rounding ?
 // equals()
+// hashCode()
 
 class MoneyTest extends TestCase
 {
