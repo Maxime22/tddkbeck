@@ -2,6 +2,7 @@ build:
 	docker build -t imagetddkbeck .
 
 start:
+	docker rm containertddkbeck
 	docker run -it -d -v ${PWD}:/app --name containertddkbeck -p 8080:80 imagetddkbeck
 
 sh:
