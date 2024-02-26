@@ -13,16 +13,25 @@ use PHPUnit\Framework\TestCase;
 // hashCode()
 // Equal null
 // Equal object
+// 5 CHF * 2 = 10 CHF
 
 class MoneyTest extends TestCase
 {
 
     /** @test **/
-    public function multiplication(): void
+    public function dollarMultiplication(): void
     {
         $five = new Dollar(5);
         $this->assertEquals(new Dollar(10), $five->times(2));
         $this->assertEquals(new Dollar(15), $five->times(3));
+    }
+
+    /** @test **/
+    public function francMultiplication(): void
+    {
+        $five = new Franc(5);
+        $this->assertEquals(new Franc(10), $five->times(2));
+        $this->assertEquals(new Franc(15), $five->times(3));
     }
 
     /** @test */
