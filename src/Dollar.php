@@ -3,7 +3,7 @@ declare(strict_types=1);
 
 namespace App;
 
-class Dollar
+class Dollar extends Money
 {
     private $amount;
 
