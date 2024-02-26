@@ -2,6 +2,7 @@
 declare(strict_types=1);
 
 use App\Dollar;
+use App\Franc;
 use PHPUnit\Framework\TestCase;
 
 // $5 + 10CHF = $10 if rate is 2:1
