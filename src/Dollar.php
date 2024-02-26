@@ -15,12 +15,11 @@ class Dollar extends Money
         return new Dollar($this->amount * $multiplier);
     }
 
-    public function equals(object $object): bool
+    public function equals(object $money): bool
     {
-        if (!($object instanceof Dollar)) {
+        if (!($money instanceof Money)) {
             return false;
         }
-        $dollar = $object;
-        return $this->amount == $dollar->amount;
+        return $this->amount == $money->amount;
     }
 }
