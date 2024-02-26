@@ -3,10 +3,8 @@ declare(strict_types=1);
 
 namespace App;
 
-class Franc
+class Franc extends Money
 {
-    private $amount;
-
     public function __construct(int $amount)
     {
         $this->amount = $amount;
