@@ -9,7 +9,7 @@ abstract class Money
 
     abstract protected function times(int $multiplier);
 
-    public static function dollar($amount): Dollar
+    public static function dollar($amount): Money
     {
         return new Dollar($amount);
     }
