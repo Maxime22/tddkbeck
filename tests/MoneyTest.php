@@ -19,6 +19,7 @@ use PHPUnit\Framework\TestCase;
 // Common times
 // Compare Francs with Dollars ✔️
 // Currency?
+// Delete testFrancMultiplication?
 
 class MoneyTest extends TestCase
 {
