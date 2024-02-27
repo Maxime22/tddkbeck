@@ -7,7 +7,8 @@ abstract class Money
 {
     protected $amount;
 
-    abstract protected function times(int $multiplier);
+    abstract protected function times(int $multiplier): Money;
+    abstract protected function currency(): string;
 
     public static function dollar($amount): Money
     {
