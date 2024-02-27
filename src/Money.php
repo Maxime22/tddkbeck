@@ -6,9 +6,9 @@ namespace App;
 abstract class Money
 {
     protected $amount;
+    protected $currency;
 
     abstract protected function times(int $multiplier): Money;
-    abstract protected function currency(): string;
 
     public static function dollar($amount): Money
     {
@@ -26,5 +26,10 @@ abstract class Money
             return false;
         }
         return $this->amount == $money->amount;
+    }
+
+    public function currency(): string
+    {
+        return $this->currency;
     }
 }
