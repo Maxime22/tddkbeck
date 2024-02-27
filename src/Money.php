@@ -9,7 +9,7 @@ class Money
 
     public function equals(object $money): bool
     {
-        if (!($money instanceof Money)) {
+        if (!($money instanceof Money) || (get_class($this) != get_class($money))) {
             return false;
         }
         return $this->amount == $money->amount;
