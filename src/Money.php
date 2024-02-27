@@ -7,6 +7,11 @@ class Money
 {
     protected $amount;
 
+    public static function dollar($amount): Dollar
+    {
+        return new Dollar($amount);
+    }
+
     public function equals(object $money): bool
     {
         if (!($money instanceof Money) || (get_class($this) != get_class($money))) {
