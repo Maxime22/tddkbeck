@@ -3,6 +3,7 @@ declare(strict_types=1);
 
 use App\Dollar;
 use App\Franc;
+use App\Money;
 use PHPUnit\Framework\TestCase;
 
 // $5 + 10CHF = $10 if rate is 2:1
@@ -27,7 +28,7 @@ class MoneyTest extends TestCase
     /** @test **/
     public function dollarMultiplication(): void
     {
-        $five = new Dollar(5);
+        $five = Money::dollar(5);
         $this->assertEquals(new Dollar(10), $five->times(2));
         $this->assertEquals(new Dollar(15), $five->times(3));
     }
