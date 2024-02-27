@@ -3,9 +3,11 @@ declare(strict_types=1);
 
 namespace App;
 
-class Money
+abstract class Money
 {
     protected $amount;
+
+    abstract protected function times(int $multiplier);
 
     public static function dollar($amount): Dollar
     {
