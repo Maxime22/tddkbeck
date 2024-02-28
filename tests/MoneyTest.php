@@ -21,6 +21,10 @@ use PHPUnit\Framework\TestCase;
 // Currency? ✔️
 // Delete testFrancMultiplication? ✔️
 
+
+// $5 + 10CHF = $10 if rate is 2:1
+// $5 + $5 = $10
+
 class MoneyTest extends TestCase
 {
 
