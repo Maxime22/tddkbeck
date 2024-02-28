@@ -46,4 +46,9 @@ class Money implements ExpressionInterface
     {
         return new Sum($this, $addend);
     }
+
+    public function reduce(string $to): Money
+    {
+        return $this;
+    }
 }
