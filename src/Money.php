@@ -12,7 +12,7 @@ abstract class Money
 
     public static function dollar($amount): Money
     {
-        return new Dollar($amount, null);
+        return new Dollar($amount, "USD");
     }
 
     public static function franc($amount): Money
