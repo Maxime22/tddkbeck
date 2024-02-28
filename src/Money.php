@@ -5,7 +5,7 @@ namespace App;
 
 class Money implements ExpressionInterface
 {
-    protected $amount;
+    public $amount;
     protected $currency;
 
     public function __construct(int $amount, string $currency)
