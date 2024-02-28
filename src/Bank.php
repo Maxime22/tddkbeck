@@ -8,7 +8,6 @@ class Bank
     public function reduce(ExpressionInterface $source, string $to): Money
     {
         $sum = $source;
-        $amount = $sum->augend->amount + $sum->addend->amount;
-        return new Money($amount, $to);
+        return $sum->reduce($to);
     }
 }
