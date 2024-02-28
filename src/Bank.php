@@ -7,6 +7,9 @@ class Bank
 {
     public function reduce(ExpressionInterface $source, string $to): Money
     {
+        if($source instanceof Money){
+            return $source;
+        }
         $sum = $source;
         return $sum->reduce($to);
     }
