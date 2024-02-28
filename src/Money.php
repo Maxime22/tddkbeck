@@ -3,7 +3,7 @@ declare(strict_types=1);
 
 namespace App;
 
-class Money
+class Money implements ExpressionInterface
 {
     protected $amount;
     protected $currency;
@@ -42,7 +42,7 @@ class Money
         return $this->currency;
     }
 
-    public function plus(Money $addend): Money
+    public function plus(Money $addend): ExpressionInterface
     {
         return new Money($this->amount + $addend->amount, $this->currency);
     }
