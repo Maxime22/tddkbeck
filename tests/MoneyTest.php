@@ -50,4 +50,11 @@ class MoneyTest extends TestCase
         $this->assertEquals("USD", Money::dollar(1)->currency());
         $this->assertEquals("CHF", Money::franc(1)->currency());
     }
+
+    /** @test **/
+    public function simpleAddition(): void
+    {
+        $sum = Money::dollar(5)->plus(Money::dollar(5));
+        $this->assertTrue((Money::dollar(10))->equals($sum));
+    }
 }
