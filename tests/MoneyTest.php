@@ -3,6 +3,7 @@ declare(strict_types=1);
 
 use App\Bank;
 use App\Money;
+use App\Sum;
 use PHPUnit\Framework\TestCase;
 
 // $5 + 10CHF = $10 if rate is 2:1
@@ -68,7 +69,7 @@ class MoneyTest extends TestCase
     {
         $five = Money::dollar(5);
         $result = $five->plus($five);
-        $sum = new Sum($result);
+        $sum = $result;
         $this->assertTrue($five->equals($sum->augend));
         $this->assertTrue($five->equals($sum->addend));
     }
