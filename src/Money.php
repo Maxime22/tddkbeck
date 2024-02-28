@@ -12,12 +12,12 @@ abstract class Money
 
     public static function dollar($amount): Money
     {
-        return new Dollar($amount);
+        return new Dollar($amount, null);
     }
 
     public static function franc($amount): Money
     {
-        return new Franc($amount);
+        return new Franc($amount, null);
     }
 
     public function equals(object $money): bool
