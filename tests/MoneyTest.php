@@ -1,6 +1,7 @@
 <?php
 declare(strict_types=1);
 
+use App\Bank;
 use App\Money;
 use PHPUnit\Framework\TestCase;
 
