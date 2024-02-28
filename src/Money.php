@@ -44,6 +44,6 @@ class Money implements ExpressionInterface
 
     public function plus(Money $addend): ExpressionInterface
     {
-        return new Money($this->amount + $addend->amount, $this->currency);
+        return new Sum($this, $addend);
     }
 }
