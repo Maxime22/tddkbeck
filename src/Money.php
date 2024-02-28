@@ -31,10 +31,10 @@ class Money
 
     public function equals(object $money): bool
     {
-        if (!($money instanceof Money) || (get_class($this) != get_class($money))) {
+        if (!($money instanceof Money)) {
             return false;
         }
-        return $this->amount == $money->amount;
+        return ($this->amount == $money->amount) && ($this->currency() == $money->currency());
     }
 
     public function currency(): string
