@@ -3,12 +3,15 @@ declare(strict_types=1);
 
 namespace App;
 
-abstract class Money
+class Money
 {
     protected $amount;
     protected $currency;
 
-    abstract protected function times(int $multiplier): Money;
+    public function times(int $multiplier) : ?Money
+    {
+        return null;
+    }
 
     public function __construct(int $amount, string $currency)
     {
