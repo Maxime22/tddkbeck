@@ -8,11 +8,6 @@ class Money
     protected $amount;
     protected $currency;
 
-    public function times(int $multiplier) : ?Money
-    {
-        return null;
-    }
-
     public function __construct(int $amount, string $currency)
     {
         $this->amount = $amount;
@@ -35,6 +30,11 @@ class Money
             return false;
         }
         return ($this->amount == $money->amount) && ($this->currency() == $money->currency());
+    }
+
+    public function times(int $multiplier) : Money
+    {
+        return new Money($this->amount * $multiplier, $this->currency);
     }
 
     public function currency(): string
