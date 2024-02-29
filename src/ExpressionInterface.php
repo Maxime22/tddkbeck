@@ -4,5 +4,5 @@ declare(strict_types=1);
 namespace App;
 interface  ExpressionInterface
 {
-    public function reduce(string $to): Money;
+    public function reduce(Bank $bank, string $to): Money;
 }

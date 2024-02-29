@@ -7,6 +7,6 @@ class Bank
 {
     public function reduce(ExpressionInterface $source, string $to): Money
     {
-        return $source->reduce($to);
+        return $source->reduce($this, $to);
     }
 }
