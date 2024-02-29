@@ -20,8 +20,8 @@ class Sum implements ExpressionInterface
         return new Money($amount, $to);
     }
 
-    public function plus(ExpressionInterface $addend): ?ExpressionInterface
+    public function plus(ExpressionInterface $addend): ExpressionInterface
     {
-        return null;
+        return new Sum($this, $addend);
     }
 }
