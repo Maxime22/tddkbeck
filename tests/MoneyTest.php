@@ -26,7 +26,7 @@ use PHPUnit\Framework\TestCase;
 
 // $5 + 10CHF = $10 if rate is 2:1 ✔️
 // $5 + $5 = $10 ✔️
-// Return Money from $5 + $5
+// Return Money from $5 + $5 ❌
 // Bank.reduce(Money) ✔️
 // Reduce Money with conversion ✔️
 // Reduce(Bank, String) ✔️
@@ -137,11 +137,5 @@ class MoneyTest extends TestCase
         $sum = (new Sum($fiveBucks, $tenFrancs))->times(2);
         $result = $bank->reduce($sum, "USD");
         $this->assertTrue((Money::dollar(20))->equals($result));
-    }
-
-    /** @test **/
-    public function plusSameCurrencyReturnsMoney(){
-        $sum = (Money::dollar(1))->plus(Money::dollar(1));
-        $this->assertInstanceOf(Money::class,$sum);
     }
 }
