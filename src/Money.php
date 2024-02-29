@@ -32,7 +32,7 @@ class Money implements ExpressionInterface
         return ($this->amount == $money->amount) && ($this->currency() == $money->currency());
     }
 
-    public function times(int $multiplier): Money
+    public function times(int $multiplier): ExpressionInterface
     {
         return new Money($this->amount * $multiplier, $this->currency);
     }
@@ -42,7 +42,7 @@ class Money implements ExpressionInterface
         return $this->currency;
     }
 
-    public function plus(Money $addend): ExpressionInterface
+    public function plus(ExpressionInterface $addend): ExpressionInterface
     {
         return new Sum($this, $addend);
     }

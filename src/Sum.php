@@ -5,10 +5,10 @@ namespace App;
 
 class Sum implements ExpressionInterface
 {
-    public Money $augend;
-    public Money $addend;
+    public ExpressionInterface $augend;
+    public ExpressionInterface $addend;
 
-    public function __construct(Money $augend, Money $addend)
+    public function __construct(ExpressionInterface $augend, ExpressionInterface $addend)
     {
         $this->augend = $augend;
         $this->addend = $addend;
