@@ -20,6 +20,7 @@ class Bank
 
     public function rate($from, $to): int
     {
+        if($from == $to) return 1;
         $pair = new Pair($from, $to);
         return $this->rates[(string)$pair];
     }
