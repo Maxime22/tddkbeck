@@ -24,4 +24,9 @@ class Sum implements ExpressionInterface
     {
         return new Sum($this, $addend);
     }
+
+    public function times(int $multiplier): ExpressionInterface
+    {
+        return new Sum($this->augend->times($multiplier), $this->addend->times($multiplier));
+    }
 }

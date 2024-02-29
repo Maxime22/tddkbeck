@@ -31,7 +31,7 @@ use PHPUnit\Framework\TestCase;
 // Reduce Money with conversion ✔️
 // Reduce(Bank, String) ✔️
 // Sum.plus ✔️
-// Expression.times
+// Expression.times ✔️
 
 class MoneyTest extends TestCase
 {
