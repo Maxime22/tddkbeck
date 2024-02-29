@@ -19,4 +19,9 @@ class Sum implements ExpressionInterface
         $amount = $this->augend->reduce($bank, $to)->amount + $this->addend->reduce($bank, $to)->amount;
         return new Money($amount, $to);
     }
+
+    public function plus(ExpressionInterface $addend): ?ExpressionInterface
+    {
+        return null;
+    }
 }

@@ -5,4 +5,5 @@ namespace App;
 interface  ExpressionInterface
 {
     public function reduce(Bank $bank, string $to): Money;
+    public function plus(ExpressionInterface $addend): ?ExpressionInterface;
 }
