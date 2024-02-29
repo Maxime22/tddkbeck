@@ -32,7 +32,7 @@ class Money implements ExpressionInterface
         return ($this->amount == $money->amount) && ($this->currency() == $money->currency());
     }
 
-    public function times(int $multiplier) : Money
+    public function times(int $multiplier): Money
     {
         return new Money($this->amount * $multiplier, $this->currency);
     }
@@ -49,6 +49,7 @@ class Money implements ExpressionInterface
 
     public function reduce(string $to): Money
     {
-        return $this;
+        $rate = ($this->currency == "CHF" && $to == "USD") ? 2 : 1;
+        return new Money($this->amount / $rate, $to);
     }
 }
